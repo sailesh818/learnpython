@@ -1,0 +1,48 @@
+{
+  "title": "Intermediate Python",
+  "level": "intermediate",
+  "description": "Learn functions, iterators, generators, OOP, and modules.",
+  "content": [
+    {
+      "heading": "Functions",
+      "code": "def greet(name):\n    return 'Hello ' + name\nprint(greet('Tom'))"
+    },
+    {
+      "heading": "Generators",
+      "code": "def gen():\n    yield 1\n    yield 2"
+    },
+    {
+      "heading": "Iterators",
+      "code": "nums = [1,2,3]\nitr = iter(nums)\nprint(next(itr))"
+    },
+    {
+      "heading": "Classes & Objects",
+      "code": "class A:\n    def show(self):\n        print('Hello')\na = A()\na.show()"
+    },
+    {
+      "heading": "Method Overriding",
+      "code": "class A:\n    def show(self): print('A')\nclass B(A):\n    def show(self): print('B')"
+    }
+  ],
+  "examples": [
+    {
+      "code": "for x in gen():\n    print(x)"
+    },
+    {
+      "code": "print(len('Python'))"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does yield do?",
+      "options": ["Stops loop", "Creates generator", "Defines class"],
+      "answer": "Creates generator"
+    },
+    {
+      "question": "Which is used for iteration?",
+      "options": ["int()", "iter()", "type()", "str()"],
+      "answer": "iter()"
+    }
+  ],
+  "summary": "You learned functions, OOP, overriding, iterators, and generators."
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Advanced Python",
+  "level": "advanced",
+  "description": "Master decorators, multithreading, multiprocessing, context managers, and file operations.",
+  "content": [
+    {
+      "heading": "Decorators",
+      "code": "def deco(fn):\n    def wrap():\n        print('Before')\n        fn()\n    return wrap\n@deco\ndef test(): print('Running')\ntest()"
+    },
+    {
+      "heading": "Context Managers",
+      "code": "with open('file.txt', 'r') as f:\n    print(f.read())"
+    },
+    {
+      "heading": "Multithreading",
+      "code": "import threading\n\ndef task(): print('Working')\nthreading.Thread(target=task).start()"
+    },
+    {
+      "heading": "Lambda Functions",
+      "code": "x = lambda a: a * 2\nprint(x(5))"
+    }
+  ],
+  "examples": [
+    {
+      "code": "nums = [1,2,3]\nprint(list(map(lambda x: x*x, nums)))"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which keyword closes a file automatically?",
+      "options": ["with", "open", "try", "finally"],
+      "answer": "with"
+    }
+  ],
+  "summary": "You learned decorators, context managers, lambdas, and threading."
+}

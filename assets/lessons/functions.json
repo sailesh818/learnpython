@@ -1,0 +1,31 @@
+{
+  "title": "Functions",
+  "overview": "Learn how to create flexible and powerful functions in Python using *args, **kwargs, lambda functions, and higher-order functions. Functions help organize code and make it reusable.",
+  "topics": [
+    "Introduction to functions",
+    "Using *args for variable positional arguments",
+    "Using **kwargs for variable keyword arguments",
+    "Lambda (anonymous) functions",
+    "Higher-order functions",
+    "Practical examples of flexible functions"
+  ],
+  "examples": [
+    "def add(*args):\n    return sum(args)\nadd(1, 2, 3)",
+    "def print_info(**kwargs):\n    for key, value in kwargs.items():\n        print(f'{key} = {value}')",
+    "square = lambda x: x * x",
+    "sorted_list = sorted([(1, 3), (2, 1), (3, 2)], key=lambda x: x[1])"
+  ],
+  "practice": [
+    "Write a function that multiplies any number of arguments using *args.",
+    "Write a function that prints key-value pairs using **kwargs.",
+    "Use a lambda to sort a list of tuples by second value."
+  ],
+  "quiz": [
+    {
+      "question": "What does *args allow?",
+      "options": ["Fixed parameters", "Infinite positional arguments", "Keyword arguments", "Returning multiple values"],
+      "answer": "Infinite positional arguments"
+    }
+  ],
+  "summary": "Python functions can accept flexible numbers of arguments using *args and **kwargs, and can be written concisely with lambda expressions. Mastering these features allows you to write concise, reusable, and powerful code."
+}

@@ -1,0 +1,34 @@
+{
+  "title": "APIs and JSON",
+  "overview": "APIs allow Python to communicate with external services, while JSON is a lightweight data format used for exchanging information.",
+  "topics": [
+    "What is an API?",
+    "What is JSON?",
+    "Making API requests using Python",
+    "Parsing JSON responses",
+    "Using API data in programs"
+  ],
+  "examples": [
+    "import requests\n\nr = requests.get('https://jsonplaceholder.typicode.com/todos/1')\nprint(r.json())",
+    "response = requests.get('https://api.github.com/users/octocat')\ndata = response.json()\nprint(data['login'])"
+  ],
+  "practice": [
+    "Call any public API and print its JSON response.",
+    "Extract and print any field from a JSON response.",
+    "Write a Python program that fetches weather data and prints the temperature.",
+    "Parse a JSON list and print each item."
+  ],
+  "quiz": [
+    {
+      "question": "What does response.json() return?",
+      "options": ["String", "List", "Python dictionary", "Number"],
+      "answer": "Python dictionary"
+    },
+    {
+      "question": "Which library is commonly used to fetch API data in Python?",
+      "options": ["os", "json", "requests", "math"],
+      "answer": "requests"
+    }
+  ],
+  "summary": "APIs allow Python to access real-time data from the internet, and JSON is the format used to store and transmit that data. Learning both is essential for modern Python development."
+}

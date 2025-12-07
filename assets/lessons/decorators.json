@@ -1,0 +1,28 @@
+{
+  "title": "Decorators",
+  "overview": "Learn how Python decorators modify the behavior of functions using the @ syntax. Decorators are powerful tools for logging, access control, and code reuse.",
+  "topics": [
+    "What is a decorator?",
+    "Basic decorator syntax",
+    "Using @ syntax",
+    "Multiple decorators on a function",
+    "Practical uses of decorators"
+  ],
+  "examples": [
+    "def deco(f):\n    def wrapper():\n        print('Before')\n        f()\n        print('After')\n    return wrapper",
+    "@deco\ndef hello():\n    print('Hello')"
+  ],
+  "practice": [
+    "Create a decorator that logs function calls.",
+    "Create a decorator that checks user login.",
+    "Use multiple decorators on one function."
+  ],
+  "quiz": [
+    {
+      "question": "What does a decorator do?",
+      "options": ["Creates loops", "Modifies behavior of functions", "Reads files", "Handles errors"],
+      "answer": "Modifies behavior of functions"
+    }
+  ],
+  "summary": "Decorators are advanced Python features that let you wrap functions to extend or modify their behavior without changing their code. They are widely used for logging, validation, authentication, and more."
+}

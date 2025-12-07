@@ -1,0 +1,43 @@
+{
+  "title": "Object Oriented Python",
+  "overview": "Learn the fundamentals of object-oriented programming (OOP) in Python, including classes, objects, constructors, and methods. OOP helps organize code, model real-world entities, and promotes code reuse.",
+  "topics": [
+    "What is Object-Oriented Programming?",
+    "Defining Classes",
+    "Creating Objects",
+    "Constructors (__init__ method)",
+    "Adding Methods to Classes",
+    "Instance and Class Variables",
+    "Practical Uses of OOP"
+  ],
+  "examples": [
+    "class Dog:\n    def __init__(self, name):\n        self.name = name\n\n    def bark(self):\n        print(f'{self.name} says Woof!')",
+    "d = Dog('Buddy')\nd.bark()  # Output: Buddy says Woof!",
+    "class Cat:\n    def sound(self):\n        print('Meow!')\n\nc = Cat()\nc.sound()  # Output: Meow!"
+  ],
+  "practice": [
+    "Create a Car class with brand and year.",
+    "Add a method that prints car details.",
+    "Create 3 objects using the class and call their methods.",
+    "Create a BankAccount class with deposit and withdraw methods.",
+    "Create a class hierarchy with a parent class Vehicle and child classes Car and Bike."
+  ],
+  "quiz": [
+    {
+      "question": "What is __init__?",
+      "options": ["Destructor", "Constructor", "Variable", "File"],
+      "answer": "Constructor"
+    },
+    {
+      "question": "Which keyword is used to define a class in Python?",
+      "options": ["func", "def", "class", "object"],
+      "answer": "class"
+    },
+    {
+      "question": "How do you call a method of an object?",
+      "options": ["Class.method()", "object.method()", "object.class()", "method.object()"],
+      "answer": "object.method()"
+    }
+  ],
+  "summary": "Object-oriented programming in Python allows you to create classes and objects to model real-world entities. Using constructors, methods, and variables, you can encapsulate data and behavior, making your code organized, reusable, and easier to maintain."
+}

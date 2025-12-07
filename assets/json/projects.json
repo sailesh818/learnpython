@@ -1,0 +1,40 @@
+{
+  "title": "Python Projects",
+  "level": "projects",
+  "description": "Mini Python projects to build real-world skills.",
+  "content": [
+    {
+      "heading": "Calculator App",
+      "code": "def add(a, b):\n    return a + b\n\nprint(add(5, 3))"
+    },
+    {
+      "heading": "To-Do App",
+      "code": "tasks = []\ntasks.append('Study Python')\nprint(tasks)"
+    },
+    {
+      "heading": "Weather Fetcher",
+      "code": "import requests\nresponse = requests.get('https://api.weatherapi.com/...')\ndata = response.json()\nprint(data)"
+    }
+  ],
+  "examples": [
+    {
+      "code": "# Calculator example\nprint(add(10, 20))"
+    },
+    {
+      "code": "# To-Do list example\ntasks.append('Learn JSON')\nprint(tasks)"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which Python module is commonly used to make HTTP requests?",
+      "options": ["requests", "os", "sys", "math"],
+      "answer": "requests"
+    },
+    {
+      "question": "How do you append a new item to a list?",
+      "options": ["append()", "add()", "insert()", "extend()"],
+      "answer": "append()"
+    }
+  ],
+  "summary": "You built mini Python projects including a calculator, to-do app, and weather fetcher."
+}

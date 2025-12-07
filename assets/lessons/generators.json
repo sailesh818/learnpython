@@ -1,0 +1,34 @@
+{
+  "title": "Generators & Iterators",
+  "overview": "Generators allow you to create iterators in Python that return values one at a time using the yield keyword. They are memory-efficient and ideal for handling large sequences.",
+  "topics": [
+    "What are iterators?",
+    "How generators work",
+    "Using the yield keyword",
+    "iter() and next() functions",
+    "Generator expressions"
+  ],
+  "examples": [
+    "def gen():\n    yield 1\n    yield 2\n\ng = gen()\nprint(next(g))",
+    "nums = (x*x for x in range(5))\nprint(next(nums))"
+  ],
+  "practice": [
+    "Create a generator that returns even numbers from 1 to 20.",
+    "Write a custom iterator class that counts from 1 to 5.",
+    "Create a Fibonacci generator using yield.",
+    "Create a generator expression that prints squares of numbers."
+  ],
+  "quiz": [
+    {
+      "question": "Generators return values using:",
+      "options": ["return", "yield", "break", "stop"],
+      "answer": "yield"
+    },
+    {
+      "question": "What does iter() do?",
+      "options": ["Creates an iterator", "Stops a loop", "Creates a list", "Returns a dictionary"],
+      "answer": "Creates an iterator"
+    }
+  ],
+  "summary": "Generators and iterators allow Python to process sequences efficiently without storing all data in memory. They generate values lazily and are useful for loops, large datasets, and stream processing."
+}

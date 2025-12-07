@@ -1,0 +1,37 @@
+{
+  "title": "Python Exercises",
+  "level": "practice",
+  "description": "Practice questions to test your Python skills.",
+  "content": [
+    {
+      "heading": "Even Numbers",
+      "code": "# Print all even numbers from 1 to 20\nfor i in range(1, 21):\n    if i % 2 == 0:\n        print(i)"
+    },
+    {
+      "heading": "Factorial Function",
+      "code": "# Write a function to return factorial\ndef factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(5))"
+    },
+    {
+      "heading": "Reverse String",
+      "code": "# Reverse a string\ntext = 'Python'\nreversed_text = text[::-1]\nprint(reversed_text)"
+    }
+  ],
+  "examples": [
+    {
+      "code": "# Example: print squares of first 5 numbers\nfor i in range(1, 6):\n    print(i*i)"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which operator is used to get remainder?",
+      "options": ["%", "//", "/", "*"],
+      "answer": "%"
+    },
+    {
+      "question": "How do you reverse a string 'abc' in Python?",
+      "options": ["'abc'[::-1]", "'abc'.reverse()", "reverse('abc')", "strrev('abc')"],
+      "answer": "'abc'[::-1]"
+    }
+  ],
+  "summary": "You practiced loops, functions, and string manipulation in Python."
+}

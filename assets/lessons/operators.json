@@ -1,0 +1,33 @@
+{
+  "title": "Operators",
+  "overview": "Operators perform operations on variables and values.",
+  "topics": [
+    "Arithmetic operators",
+    "Comparison operators",
+    "Logical operators",
+    "Assignment operators"
+  ],
+  "examples": [
+    "x = 10 + 5",
+    "print(10 > 3)",
+    "print(True and False)"
+  ],
+  "practice": [
+    "Add two numbers and print the result.",
+    "Check if 20 is greater than 10.",
+    "Use the OR operator in a condition."
+  ],
+  "quiz": [
+    {
+      "question": "What is the result of 10 % 3?",
+      "options": ["1", "2", "3", "0"],
+      "answer": "1"
+    },
+    {
+      "question": "Which operator checks equality?",
+      "options": ["=", "==", "===", "!="],
+      "answer": "=="
+    }
+  ],
+  "summary": "Operators allow mathematical, logical, and comparison operations."
+}

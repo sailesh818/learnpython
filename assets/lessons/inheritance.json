@@ -1,0 +1,42 @@
+{
+  "title": "Inheritance",
+  "overview": "Learn how classes in Python can inherit properties and methods from other classes. Inheritance promotes code reuse and allows building hierarchical class structures.",
+  "topics": [
+    "What is inheritance?",
+    "Parent (base) and child (derived) classes",
+    "Overriding methods",
+    "Using super() to access parent methods",
+    "Multiple inheritance",
+    "Practical uses of inheritance"
+  ],
+  "examples": [
+    "class Animal:\n    def eat(self):\n        print('Eating')\n\nclass Dog(Animal):\n    pass\n\nd = Dog()\nd.eat()  # Output: Eating",
+    "class Bird:\n    def sound(self):\n        print('Chirp')\n\nclass Sparrow(Bird):\n    pass\n\ns = Sparrow()\ns.sound()  # Output: Chirp",
+    "class Dog(Animal):\n    def __init__(self, name):\n        super().__init__()\n        self.name = name"
+  ],
+  "practice": [
+    "Create Parent and Child classes.",
+    "Override a method in child class.",
+    "Use super() inside child constructor.",
+    "Create a class hierarchy with Vehicle as parent and Car and Bike as children.",
+    "Demonstrate multiple inheritance with two parent classes."
+  ],
+  "quiz": [
+    {
+      "question": "Inheritance allows:",
+      "options": ["Memory saving", "Code reuse", "Faster loops", "File access"],
+      "answer": "Code reuse"
+    },
+    {
+      "question": "Which function is used to call a parent class constructor?",
+      "options": ["init()", "super()", "parent()", "self()"],
+      "answer": "super()"
+    },
+    {
+      "question": "A child class can:",
+      "options": ["Access parent methods", "Only access its own methods", "Cannot inherit", "Delete parent class"],
+      "answer": "Access parent methods"
+    }
+  ],
+  "summary": "Inheritance allows Python classes to reuse code from parent classes and extend or override their behavior. It is fundamental for building scalable and organized programs with hierarchical relationships."
+}

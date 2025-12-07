@@ -1,0 +1,37 @@
+{
+  "title": "Database Handling",
+  "overview": "Python provides built-in support for SQLite databases, enabling applications to store, manage, and retrieve data easily.",
+  "topics": [
+    "What is a database?",
+    "Connecting to SQLite",
+    "Creating tables",
+    "Inserting data",
+    "Querying data",
+    "Updating and deleting records"
+  ],
+  "examples": [
+    "import sqlite3\n\nconn = sqlite3.connect('data.db')\ncursor = conn.cursor()",
+    "cursor.execute(\"CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)\")",
+    "cursor.execute(\"INSERT INTO users (name, age) VALUES (?, ?)\", ('Alice', 21))\nconn.commit()",
+    "cursor.execute(\"SELECT * FROM users\")\nprint(cursor.fetchall())"
+  ],
+  "practice": [
+    "Create a table named products with id, name, and price fields.",
+    "Insert 3 rows into your products table.",
+    "Write a query to display all users older than 18.",
+    "Delete a record from a table using SQL commands in Python."
+  ],
+  "quiz": [
+    {
+      "question": "Which module is used for SQLite in Python?",
+      "options": ["mysql", "psycopg2", "sqlite3", "mongo"],
+      "answer": "sqlite3"
+    },
+    {
+      "question": "What does cursor.execute() do?",
+      "options": ["Runs SQL commands", "Starts a new thread", "Creates a file", "Connects to the internet"],
+      "answer": "Runs SQL commands"
+    }
+  ],
+  "summary": "Database handling in Python is simple using SQLite. It helps store structured data and retrieve it efficiently using SQL queries."
+}

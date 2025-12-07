@@ -1,0 +1,33 @@
+{
+  "title": "Multithreading",
+  "overview": "Multithreading allows Python to perform multiple tasks concurrently, mainly useful for I/O operations such as downloading files, reading data, and background tasks.",
+  "topics": [
+    "What is multithreading?",
+    "Thread class in Python",
+    "Creating and starting threads",
+    "Running multiple threads",
+    "Use cases of multithreading"
+  ],
+  "examples": [
+    "import threading\n\ndef task():\n    print('Thread running')\n\nthread = threading.Thread(target=task)\nthread.start()",
+    "import threading\n\ndef worker(name):\n    print(f'Worker {name} started')\n\nfor i in range(3):\n    t = threading.Thread(target=worker, args=(i,))\n    t.start()"
+  ],
+  "practice": [
+    "Create a program that starts 5 threads printing numbers.",
+    "Write a multithreaded program that prints your name 10 times using threads.",
+    "Make a thread that runs in the background and prints 'Loading...' every second."
+  ],
+  "quiz": [
+    {
+      "question": "What is multithreading mainly used for?",
+      "options": ["CPU-heavy tasks", "I/O tasks", "Only database tasks", "Only GUI programs"],
+      "answer": "I/O tasks"
+    },
+    {
+      "question": "Which Python module is used for threads?",
+      "options": ["asyncio", "process", "threading", "multiprocessing"],
+      "answer": "threading"
+    }
+  ],
+  "summary": "Multithreading helps Python run multiple tasks at the same time, mainly improving performance in I/O operations such as file reading, network calls, and background processing."
+}

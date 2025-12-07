@@ -1,0 +1,30 @@
+{
+  "title": "Modules and Packages",
+  "overview": "Learn how to organize Python programs into reusable modules and packages. This helps manage large codebases and promotes code reuse.",
+  "topics": [
+    "What is a module?",
+    "Creating custom modules",
+    "Importing modules",
+    "What is a package?",
+    "Creating packages with __init__.py",
+    "Importing from packages",
+    "Practical uses of modules and packages"
+  ],
+  "examples": [
+    "# module: mathutils.py\n def add(a, b):\n     return a + b",
+    "from mathutils import add\nprint(add(5, 3))"
+  ],
+  "practice": [
+    "Create a module with add and subtract functions.",
+    "Create a package named utilities containing multiple modules.",
+    "Import a function using 'from module import function'."
+  ],
+  "quiz": [
+    {
+      "question": "A package is defined by:",
+      "options": ["folder", "folder with __init__.py", "module", "function"],
+      "answer": "folder with __init__.py"
+    }
+  ],
+  "summary": "Modules and packages allow you to split Python code into separate files and directories for better organization and reuse. Using custom modules and packages makes it easier to maintain and scale your programs."
+}

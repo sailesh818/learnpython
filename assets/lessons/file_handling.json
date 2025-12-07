@@ -1,0 +1,30 @@
+{
+  "title": "File Handling",
+  "overview": "Learn how to read, write, and manipulate files in Python. File handling allows you to store data persistently and process it efficiently.",
+  "topics": [
+    "Introduction to file handling",
+    "Reading files",
+    "Writing files",
+    "Appending to files",
+    "Iterating through file lines",
+    "Practical uses of file handling"
+  ],
+  "examples": [
+    "with open('data.txt','r') as f:\n    print(f.read())",
+    "with open('data.txt','w') as f:\n    f.write('Hello!')",
+    "for line in open('data.txt'):\n    print(line)"
+  ],
+  "practice": [
+    "Write a program that counts lines in a file.",
+    "Write a program to append text to a file.",
+    "Write a program that copies one text file to another."
+  ],
+  "quiz": [
+    {
+      "question": "Which mode opens a file for writing?",
+      "options": ["r", "rb", "w", "a"],
+      "answer": "w"
+    }
+  ],
+  "summary": "File handling in Python enables you to read, write, and manage data stored in files. Mastering these operations is essential for data processing, logging, and building real-world applications."
+}

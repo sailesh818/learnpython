@@ -1,0 +1,30 @@
+{
+  "title": "Error & Exception Handling",
+  "overview": "Learn how to handle errors and exceptions in Python using try, except, finally, and custom exceptions. Proper error handling makes your programs more robust and prevents crashes.",
+  "topics": [
+    "Introduction to exceptions",
+    "Using try and except",
+    "Handling specific exceptions",
+    "Finally block",
+    "Raising custom exceptions",
+    "Best practices in exception handling"
+  ],
+  "examples": [
+    "try:\n    x = 1/0\nexcept ZeroDivisionError:\n    print('Error!')",
+    "try:\n    f = open('data.txt')\nfinally:\n    f.close()",
+    "raise ValueError('Invalid input!')"
+  ],
+  "practice": [
+    "Write a program that handles ZeroDivisionError.",
+    "Write a custom exception class.",
+    "Use try-except-finally to open and close a file safely."
+  ],
+  "quiz": [
+    {
+      "question": "What is finally used for?",
+      "options": ["To catch errors", "Always executes", "Stops the program", "Declares variables"],
+      "answer": "Always executes"
+    }
+  ],
+  "summary": "Exception handling in Python allows you to gracefully manage errors and ensure your program runs reliably. Using try, except, and finally blocks, along with custom exceptions, helps prevent crashes and handle edge cases effectively."
+}

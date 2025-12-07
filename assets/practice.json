@@ -1,0 +1,19 @@
+{
+  "title": "Python Exercises",
+  "level": "practice",
+  "description": "Practice questions to test your Python skills.",
+  "questions": [
+    {
+      "question": "Print all even numbers from 1 to 20.",
+      "hint": "Use a for loop and % operator."
+    },
+    {
+      "question": "Write a function to return factorial.",
+      "hint": "Use recursion or loop."
+    },
+    {
+      "question": "Reverse a string.",
+      "hint": "Use slicing."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Beginner Python",
+  "level": "beginner",
+  "description": "Start learning Python basics with simple and clear examples.",
+  "content": [
+    {
+      "heading": "Introduction to Python",
+      "code": "# Python is a beginner-friendly programming language used for web, AI, automation, and more.\nprint('Welcome to Python!')"
+    },
+    {
+      "heading": "Variables",
+      "code": "x = 10\ny = 'Hello'\nprint(x, y)"
+    },
+    {
+      "heading": "Data Types",
+      "code": "# Common data types: int, float, str, bool, list, tuple, dict\nx = 5\ny = 3.14\nname = 'Alice'\nflag = True\nlst = [1,2,3]\ntuple_example = (1,2)\ndict_example = {'a': 1}\nprint(x, y, name, flag, lst, tuple_example, dict_example)"
+    },
+    {
+      "heading": "If-Else Conditions",
+      "code": "age = 18\nif age >= 18:\n    print('Adult')\nelse:\n    print('Minor')"
+    },
+    {
+      "heading": "Loops",
+      "code": "for i in range(5):\n    print(i)"
+    }
+  ],
+  "examples": [
+    {
+      "code": "name = 'Alex'\nprint('Welcome', name)"
+    },
+    {
+      "code": "for n in [1,2,3]:\n    print(n*n)"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which data type is this: 10?",
+      "options": ["int", "str", "float", "dict"],
+      "answer": "int"
+    },
+    {
+      "question": "What does range(3) generate?",
+      "options": ["0 1 2", "1 2 3", "3 2 1"],
+      "answer": "0 1 2"
+    }
+  ],
+  "summary": "You learned variables, data types, conditions, and loops."
+}

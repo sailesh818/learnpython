@@ -1,0 +1,32 @@
+{
+  "title": "Loops",
+  "overview": "Loops help repeat actions in Python.",
+  "topics": [
+    "for loop",
+    "while loop",
+    "break statement",
+    "continue statement"
+  ],
+  "examples": [
+    "for i in range(5):\n    print(i)",
+    "x = 1\nwhile x <= 5:\n    print(x)\n    x += 1"
+  ],
+  "practice": [
+    "Print numbers from 1–10 using a loop.",
+    "Print each character of your name.",
+    "Use break inside a loop."
+  ],
+  "quiz": [
+    {
+      "question": "Which loop repeats until a condition becomes false?",
+      "options": ["for", "while", "loop", "repeat"],
+      "answer": "while"
+    },
+    {
+      "question": "What does 'break' do?",
+      "options": ["Skips iteration", "Ends loop", "Repeats loop", "Nothing"],
+      "answer": "Ends loop"
+    }
+  ],
+  "summary": "Loops make repetitive tasks easy and efficient."
+}

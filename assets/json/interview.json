@@ -1,0 +1,45 @@
+{
+  "title": "Python Interview Prep",
+  "level": "interview",
+  "description": "Common Python interview questions with examples.",
+  "content": [
+    {
+      "heading": "List vs Tuple",
+      "code": "# List is mutable, Tuple is immutable\nmy_list = [1, 2, 3]\nmy_tuple = (1, 2, 3)\nmy_list[0] = 10\n# my_tuple[0] = 10  # This will give an error"
+    },
+    {
+      "heading": "Decorators",
+      "code": "# Decorators wrap functions and modify behavior\ndef decorator(fn):\n    def wrapper():\n        print('Before function call')\n        fn()\n    return wrapper\n\n@decorator\ndef hello():\n    print('Hello World')\n\nhello()"
+    },
+    {
+      "heading": "PEP8",
+      "code": "# PEP8 is Python style guide\n# Example: use 4 spaces for indentation\nfor i in range(5):\n    print(i)"
+    }
+  ],
+  "examples": [
+    {
+      "code": "# Example of using list and tuple\nprint(len([1,2,3]))  # list\nprint(len((1,2,3)))  # tuple"
+    },
+    {
+      "code": "# Example decorator usage\n@decorator\ndef greet():\n    print('Hi')\ngreet()"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which data type is immutable?",
+      "options": ["List", "Tuple", "Dictionary", "Set"],
+      "answer": "Tuple"
+    },
+    {
+      "question": "What is the purpose of decorators?",
+      "options": ["Modify functions", "Create classes", "Handle exceptions", "Loop over data"],
+      "answer": "Modify functions"
+    },
+    {
+      "question": "What does PEP8 define?",
+      "options": ["Database schema", "Python style guide", "Python versioning", "Error handling rules"],
+      "answer": "Python style guide"
+    }
+  ],
+  "summary": "You learned about lists vs tuples, decorators, and Python coding standards (PEP8)."
+}

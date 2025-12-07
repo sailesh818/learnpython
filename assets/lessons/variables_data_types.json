@@ -1,0 +1,34 @@
+{
+  "title": "Variables & Data Types",
+  "overview": "Variables store data. Python has several built-in data types.",
+  "topics": [
+    "What is a variable?",
+    "Integer, Float",
+    "String",
+    "Boolean",
+    "List, Tuple"
+  ],
+  "examples": [
+    "x = 5\nprint(type(x))",
+    "name = 'Bob'\nprint(name)",
+    "numbers = [1, 2, 3]\nprint(numbers)"
+  ],
+  "practice": [
+    "Create a variable storing your age.",
+    "Make a list of 3 fruits.",
+    "Store your name in a variable and print it."
+  ],
+  "quiz": [
+    {
+      "question": "Which data type is this? 3.14",
+      "options": ["Integer", "Float", "String", "Boolean"],
+      "answer": "Float"
+    },
+    {
+      "question": "Which symbol is used to assign a variable?",
+      "options": ["=", "==", ":=", ":"],
+      "answer": "="
+    }
+  ],
+  "summary": "Variables hold data, and Python supports many useful data types."
+}

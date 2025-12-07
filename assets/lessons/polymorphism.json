@@ -1,0 +1,41 @@
+{
+  "title": "Polymorphism",
+  "overview": "Learn how Python supports polymorphism, allowing the same function or operator to behave differently based on context. This includes method overriding and operator overloading.",
+  "topics": [
+    "What is polymorphism?",
+    "Method overriding in child classes",
+    "Operator overloading",
+    "Built-in polymorphic functions (e.g., len(), +)",
+    "Practical examples of polymorphism"
+  ],
+  "examples": [
+    "class A:\n    def show(self):\n        print('A')\n\nclass B(A):\n    def show(self):\n        print('B')\n\nb = B()\nb.show()  # Output: B",
+    "print(len('abc'))  # Output: 3\nprint(len([1, 2, 3]))  # Output: 3",
+    "print(5 + 10)  # Addition for numbers\nprint('Hello ' + 'World')  # Concatenation for strings"
+  ],
+  "practice": [
+    "Override a method inside a child class.",
+    "Create two classes with same method names and call them.",
+    "Demonstrate len() polymorphism with a string and a list.",
+    "Create a class that overloads the + operator.",
+    "Write a function that works with different types of inputs."
+  ],
+  "quiz": [
+    {
+      "question": "Polymorphism means:",
+      "options": ["Multiple forms", "Multiple loops", "Multiple variables", "Multiple files"],
+      "answer": "Multiple forms"
+    },
+    {
+      "question": "Which is an example of method overriding?",
+      "options": ["defining the same method in child class", "Using same variable names", "Using global variables", "Calling a function twice"],
+      "answer": "defining the same method in child class"
+    },
+    {
+      "question": "Which built-in function is an example of polymorphism?",
+      "options": ["len()", "print()", "range()", "type()"],
+      "answer": "len()"
+    }
+  ],
+  "summary": "Polymorphism allows Python functions, methods, and operators to take multiple forms depending on context. It enables code flexibility and reuse by allowing different objects to respond to the same function call or operator in their own way."
+}

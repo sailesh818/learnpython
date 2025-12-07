@@ -1,0 +1,32 @@
+{
+  "title": "Conditional Statements",
+  "overview": "Conditional statements allow decision-making in programs.",
+  "topics": [
+    "if statement",
+    "else",
+    "elif",
+    "Nested conditions"
+  ],
+  "examples": [
+    "age = 18\nif age >= 18:\n    print('Adult')",
+    "x = 5\nif x < 0:\n    print('Negative')\nelif x == 0:\n    print('Zero')\nelse:\n    print('Positive')"
+  ],
+  "practice": [
+    "Check if a number is positive or negative.",
+    "Ask user age and print child/adult.",
+    "Check if a number is even or odd."
+  ],
+  "quiz": [
+    {
+      "question": "Which keyword is used for multiple conditions?",
+      "options": ["if", "else", "elif", "for"],
+      "answer": "elif"
+    },
+    {
+      "question": "Condition in 'if' must be?",
+      "options": ["Number", "String", "Boolean expression", "Loop"],
+      "answer": "Boolean expression"
+    }
+  ],
+  "summary": "If/else statements help a program make decisions."
+}
