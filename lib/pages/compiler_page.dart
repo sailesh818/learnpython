@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'quizzes_page.dart'; // make sure to import your QuizzesPage file
+import 'quizzes_page.dart';
 
 class CompilerPage extends StatefulWidget {
   const CompilerPage({super.key});
@@ -17,7 +17,7 @@ class _CompilerPageState extends State<CompilerPage> {
   void initState() {
     super.initState();
     _codeController.text = """
-# Example: Sum of first 5 numbers
+# Example: Sum of numbers
 total = 0
 for i in range(1, 6):
     total += i
@@ -31,29 +31,41 @@ print("Sum:", total)
     super.dispose();
   }
 
-  void _runCode() async {
+  Future<void> _runCode() async {
     setState(() {
       _isRunning = true;
       _output = "Running Python code...\n";
     });
 
-    await Future.delayed(const Duration(milliseconds: 500)); // simulate delay
+    await Future.delayed(const Duration(milliseconds: 500));
 
-    final code = _codeController.text;
+    final code = _codeController.text.trim();
     String result;
 
     try {
-      if (code.contains("for") && code.contains("range") && code.contains("total")) {
+      if (code.isEmpty) {
+        throw Exception("No code to run");
+      }
+
+      // Extract range(start, end)
+      final rangeRegex = RegExp(r'range\((\d+),\s*(\d+)\)');
+      final match = rangeRegex.firstMatch(code);
+
+      if (match != null && code.contains("total")) {
+        final int start = int.parse(match.group(1)!);
+        final int end = int.parse(match.group(2)!);
+
         int total = 0;
-        for (int i = 1; i <= 5; i++) {
+        for (int i = start; i < end; i++) {
           total += i;
         }
+
         result = "Sum: $total";
       } else {
-        result = "Output simulated";
+        result = "Output simulated (unsupported code)";
       }
     } catch (e) {
-      result = "Error: $e";
+      result = "Error: ${e.toString()}";
     }
 
     setState(() {
@@ -78,8 +90,13 @@ print("Sum:", total)
         actions: [
           IconButton(
             icon: const Icon(Icons.quiz),
-            onPressed: _goToQuizzes, // Navigate to QuizzesPage
+            onPressed: _goToQuizzes,
             tooltip: "Go to Quizzes",
+          ),
+          IconButton(
+            icon: const Icon(Icons.clear),
+            tooltip: "Clear Output",
+            onPressed: () => setState(() => _output = ""),
           ),
         ],
       ),
@@ -87,24 +104,32 @@ print("Sum:", total)
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
+            // CODE EDITOR
             Expanded(
               flex: 3,
               child: TextField(
                 controller: _codeController,
                 maxLines: null,
                 expands: true,
-                style: const TextStyle(fontFamily: 'Courier'),
+                style: const TextStyle(
+                  fontFamily: 'Courier',
+                  color: Colors.white,
+                ),
                 decoration: InputDecoration(
                   hintText: "Write your Python code here...",
+                  hintStyle: const TextStyle(color: Colors.white54),
                   filled: true,
-                  fillColor: Colors.grey[100],
+                  fillColor: Colors.grey.shade900,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
               ),
             ),
+
             const SizedBox(height: 16),
+
+            // RUN BUTTON
             ElevatedButton.icon(
               onPressed: _isRunning ? null : _runCode,
               icon: _isRunning
@@ -112,8 +137,8 @@ print("Sum:", total)
                       width: 20,
                       height: 20,
                       child: CircularProgressIndicator(
-                        color: Colors.white,
                         strokeWidth: 2,
+                        color: Colors.white,
                       ),
                     )
                   : const Icon(Icons.play_arrow),
@@ -123,7 +148,10 @@ print("Sum:", total)
                 backgroundColor: Colors.blueAccent,
               ),
             ),
+
             const SizedBox(height: 16),
+
+            // OUTPUT CONSOLE
             Expanded(
               flex: 2,
               child: Container(
@@ -136,8 +164,10 @@ print("Sum:", total)
                 child: SingleChildScrollView(
                   child: Text(
                     _output,
-                    style: const TextStyle(
-                      color: Colors.greenAccent,
+                    style: TextStyle(
+                      color: _output.contains("Error")
+                          ? Colors.redAccent
+                          : Colors.greenAccent,
                       fontFamily: 'Courier',
                     ),
                   ),
