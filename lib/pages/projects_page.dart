@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_python/pages/compiler_page.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -75,7 +76,7 @@ class ProjectsPage extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                // Navigate to project details page or show modal
+                Navigator.push(context, MaterialPageRoute(builder: (_) => CompilerPage()));
               },
             ),
           );

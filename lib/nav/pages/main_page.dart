@@ -7,7 +7,7 @@ import 'package:learn_python/pages/lessons_page.dart';
 import 'package:learn_python/pages/notes_page.dart';
 import 'package:learn_python/pages/practice_page.dart';
 //import 'package:learn_python/pages/profile_page.dart';
-import 'package:learn_python/pages/progress_page.dart';
+//import 'package:learn_python/pages/progress_page.dart';
 import 'package:learn_python/pages/projects_page.dart';
 import 'package:learn_python/pages/quizzes_page.dart';
 import 'package:learn_python/pages/settings_page.dart';
@@ -95,7 +95,7 @@ class _MainPageState extends State<MainPage> {
               drawerItem(Icons.quiz, "Quizzes", const QuizzesPage()),
               drawerItem(Icons.book, "Projects", const ProjectsPage()),
               drawerItem(Icons.note_alt, "Notes", const NotesPage()),
-              drawerItem(Icons.bar_chart, "Progress", const ProgressPage()),
+              //drawerItem(Icons.bar_chart, "Progress", const ProgressPage()),
               drawerItem(Icons.settings, "Settings", const SettingsPage()),
               drawerItem(Icons.info, "About", const AboutPage()),
               drawerItem(Icons.feedback, "Feedback", const FeedbackPage()),

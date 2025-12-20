@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learn_python/provider/theme_provider.dart';
-import 'package:provider/provider.dart';
+//import 'package:learn_python/provider/theme_provider.dart';
+//import 'package:provider/provider.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -10,7 +10,7 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  bool _notificationsEnabled = true;
+  //bool _notificationsEnabled = true;
   String _selectedFontSize = 'Medium';
 
   final List<String> _fontSizes = ['Small', 'Medium', 'Large'];
@@ -22,8 +22,8 @@ class _SettingsPageState extends State<SettingsPage> {
 
   @override
   Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
-    final bool isDarkMode = themeProvider.isDarkMode;
+    //final themeProvider = Provider.of<ThemeProvider>(context);
+    //final bool isDarkMode = themeProvider.isDarkMode;
 
     return Scaffold(
       appBar: AppBar(
@@ -45,12 +45,12 @@ class _SettingsPageState extends State<SettingsPage> {
           children: [
             // 🔹 Appearance Section
             _buildSectionTitle("Appearance"),
-            SwitchListTile(
-              title: const Text("Dark Mode"),
-              secondary: const Icon(Icons.dark_mode),
-              value: isDarkMode,
-              onChanged: (val) => themeProvider.toggleTheme(val),
-            ),
+            // SwitchListTile(
+            //   title: const Text("Dark Mode"),
+            //   secondary: const Icon(Icons.dark_mode),
+            //   value: isDarkMode,
+            //   onChanged: (val) => themeProvider.toggleTheme(val),
+            // ),
             DropdownButtonFormField<String>(
               decoration: const InputDecoration(
                 labelText: "Font Size",
@@ -72,25 +72,25 @@ class _SettingsPageState extends State<SettingsPage> {
             const SizedBox(height: 24),
 
             // 🔹 Notifications Section
-            _buildSectionTitle("Notifications"),
-            SwitchListTile(
-              title: const Text("Enable Notifications"),
-              secondary: const Icon(Icons.notifications),
-              value: _notificationsEnabled,
-              onChanged: (val) {
-                setState(() => _notificationsEnabled = val);
-              },
-            ),
-            const SizedBox(height: 24),
+            // _buildSectionTitle("Notifications"),
+            // SwitchListTile(
+            //   title: const Text("Enable Notifications"),
+            //   secondary: const Icon(Icons.notifications),
+            //   value: _notificationsEnabled,
+            //   onChanged: (val) {
+            //     setState(() => _notificationsEnabled = val);
+            //   },
+            // ),
+            // const SizedBox(height: 24),
 
             // 🔹 Account Section
             _buildSectionTitle("Account"),
-            ListTile(
-              leading: const Icon(Icons.lock_reset),
-              title: const Text("Reset App Data"),
-              onTap: () => _resetAppData(),
-            ),
-            const SizedBox(height: 24),
+            // ListTile(
+            //   leading: const Icon(Icons.lock_reset),
+            //   title: const Text("Reset App Data"),
+            //   onTap: () => _resetAppData(),
+            // ),
+            // const SizedBox(height: 24),
 
             // 🔹 About Section
             _buildSectionTitle("About"),
@@ -99,13 +99,13 @@ class _SettingsPageState extends State<SettingsPage> {
               title: const Text("App Version"),
               subtitle: const Text("v1.0.0"),
             ),
-            ListTile(
-              leading: const Icon(Icons.web),
-              title: const Text("Developer Website"),
-              onTap: () {
-                // Add URL launch here if needed
-              },
-            ),
+            // ListTile(
+            //   leading: const Icon(Icons.web),
+            //   title: const Text("Developer Website"),
+            //   onTap: () {
+            //     // Add URL launch here if needed
+            //   },
+            // ),
           ],
         ),
       ),
@@ -122,38 +122,38 @@ class _SettingsPageState extends State<SettingsPage> {
     );
   }
 
-  void _resetAppData() {
-    showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text("Reset App Data"),
-        content: const Text("Are you sure you want to reset all app data?"),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text("Cancel"),
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: purple,
-            ),
-            onPressed: () {
-              setState(() {
-                // Reset example settings
-                _notificationsEnabled = true;
-                _selectedFontSize = 'Medium';
-                final themeProvider =
-                    Provider.of<ThemeProvider>(context, listen: false);
-                if (themeProvider.isDarkMode) {
-                  themeProvider.toggleTheme(false);
-                }
-              });
-              Navigator.of(ctx).pop();
-            },
-            child: const Text("Reset"),
-          ),
-        ],
-      ),
-    );
-  }
+  // void _resetAppData() {
+  //   showDialog(
+  //     context: context,
+  //     builder: (ctx) => AlertDialog(
+  //       title: const Text("Reset App Data"),
+  //       content: const Text("Are you sure you want to reset all app data?"),
+  //       actions: [
+  //         TextButton(
+  //           onPressed: () => Navigator.of(ctx).pop(),
+  //           child: const Text("Cancel"),
+  //         ),
+  //         ElevatedButton(
+  //           style: ElevatedButton.styleFrom(
+  //             backgroundColor: purple,
+  //           ),
+  //           onPressed: () {
+  //             setState(() {
+  //               // Reset example settings
+  //               //_notificationsEnabled = true;
+  //               _selectedFontSize = 'Medium';
+  //               final themeProvider =
+  //                   Provider.of<ThemeProvider>(context, listen: false);
+  //               if (themeProvider.isDarkMode) {
+  //                 themeProvider.toggleTheme(false);
+  //               }
+  //             });
+  //             Navigator.of(ctx).pop();
+  //           },
+  //           child: const Text("Reset"),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
 }

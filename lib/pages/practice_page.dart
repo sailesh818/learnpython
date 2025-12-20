@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:learn_python/pages/compiler_page.dart';
 
 class PracticePage extends StatefulWidget {
   final String jsonFile; // JSON file to load
@@ -77,6 +78,10 @@ class _PracticePageState extends State<PracticePage> {
         title: const Text("Solution"),
         content: Text(question['solution'] ?? "Try coding this yourself!"),
         actions: [
+          TextButton(
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => CompilerPage())),
+            child: const Text("Code Yourself"),
+          ),
           TextButton(
             onPressed: () => Navigator.pop(context),
             child: const Text("Close"),

@@ -83,29 +83,29 @@ class AboutPage extends StatelessWidget {
             const SizedBox(height: 24),
 
             // Links
-            _buildSectionTitle("Links"),
-            ListTile(
-              leading: const Icon(Icons.web),
-              title: const Text("Website"),
-              onTap: () {
-                // Add URL launch
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.facebook),
-              title: const Text("Facebook"),
-              onTap: () {
-                // Add URL launch
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.code),
-              title: const Text("GitHub"),
-              onTap: () {
-                // Add URL launch
-              },
-            ),
-            const SizedBox(height: 24),
+            // _buildSectionTitle("Links"),
+            // ListTile(
+            //   leading: const Icon(Icons.web),
+            //   title: const Text("Website"),
+            //   onTap: () {
+            //     // Add URL launch
+            //   },
+            // ),
+            // ListTile(
+            //   leading: const Icon(Icons.facebook),
+            //   title: const Text("Facebook"),
+            //   onTap: () {
+            //     // Add URL launch
+            //   },
+            // ),
+            // ListTile(
+            //   leading: const Icon(Icons.code),
+            //   title: const Text("GitHub"),
+            //   onTap: () {
+            //     // Add URL launch
+            //   },
+            // ),
+            // const SizedBox(height: 24),
 
             // License / Terms
             _buildSectionTitle("License"),

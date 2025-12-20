@@ -69,7 +69,6 @@ class HomePage extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // ---------------- CATEGORIES ----------------
             const Text(
               "Categories",
               style: TextStyle(
@@ -97,24 +96,23 @@ class HomePage extends StatelessWidget {
 
             const SizedBox(height: 32),
 
-            // ---------------- CONTINUE LEARNING ----------------
-            const Text(
-              "Continue Learning",
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+            // const Text(
+            //   "Continue Learning",
+            //   style: TextStyle(
+            //     fontSize: 22,
+            //     fontWeight: FontWeight.w600,
+            //   ),
+            // ),
 
-            const SizedBox(height: 16),
+            //const SizedBox(height: 16),
 
-            Column(
-              children: continueLearning
-                  .map((lesson) => _buildContinueCard(lesson))
-                  .toList(),
-            ),
+            // Column(
+            //   children: continueLearning
+            //       .map((lesson) => _buildContinueCard(lesson))
+            //       .toList(),
+            // ),
 
-            const SizedBox(height: 40),
+            //const SizedBox(height: 40),
           ],
         ),
       ),
@@ -167,44 +165,44 @@ class HomePage extends StatelessWidget {
   }
 
   // ---------------- CONTINUE CARD ----------------
-  Widget _buildContinueCard(Map<String, dynamic> lesson) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 14),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 8,
-            offset: const Offset(0, 4),
-            color: Colors.black.withOpacity(0.05),
-          )
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            lesson["title"],
-            style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
+  // Widget _buildContinueCard(Map<String, dynamic> lesson) {
+  //   return Container(
+  //     margin: const EdgeInsets.only(bottom: 14),
+  //     padding: const EdgeInsets.all(16),
+  //     decoration: BoxDecoration(
+  //       color: Colors.white,
+  //       borderRadius: BorderRadius.circular(16),
+  //       boxShadow: [
+  //         BoxShadow(
+  //           blurRadius: 8,
+  //           offset: const Offset(0, 4),
+  //           color: Colors.black.withOpacity(0.05),
+  //         )
+  //       ],
+  //     ),
+  //     child: Column(
+  //       crossAxisAlignment: CrossAxisAlignment.start,
+  //       children: [
+  //         Text(
+  //           lesson["title"],
+  //           style: const TextStyle(
+  //             fontSize: 18,
+  //             fontWeight: FontWeight.w600,
+  //           ),
+  //         ),
 
-          const SizedBox(height: 10),
+  //         const SizedBox(height: 10),
 
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: LinearProgressIndicator(
-              value: lesson["progress"],
-              backgroundColor: Colors.grey[300],
-              minHeight: 8,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+  //         ClipRRect(
+  //           borderRadius: BorderRadius.circular(10),
+  //           child: LinearProgressIndicator(
+  //             value: lesson["progress"],
+  //             backgroundColor: Colors.grey[300],
+  //             minHeight: 8,
+  //           ),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
 }
